@@ -7,6 +7,10 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+section{
+    width:100vw;
+}
+
 /* ----NAV BAR SECTION-----r*/
 
 nav {
@@ -177,6 +181,45 @@ header .btn:hover {
     line-height: 1.5em;
 }
 
+
+
+/* ----WHAT IS NPM -----*/
+
+
+#what-is-section{
+    background-image: url("../images/forklift.svg"); 
+    height: 80vh;
+    color:white;
+}
+
+#what-is-text-div{
+    width:30%;
+    position:relative;
+    left:15%;
+    top:25%;
+}
+
+#what-is-text-div h2{
+    padding-bottom:2%;
+    font-size:2em;
+    font-weight:300;
+}
+
+#what-is-text-div h2,p,button{
+    padding-bottom:5%;
+}
+
+
+#what-is-text-div .btn {
+    background-color:rgb(49, 68, 88);
+    border: 0 0 0;
+    color:white;
+    width:25%
+}
+
+#what-is-text-div .btn:hover {
+    background-color:rgb(37, 51, 65);
+}
 
 
 

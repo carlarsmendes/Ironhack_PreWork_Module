@@ -4,12 +4,13 @@
 
 - HTML and CSS Tested with the W3C validator 
 - Check if all img have "alt"
+- Check for all hover buttons and links;
 
 
 ----*/
 
 /* Next Steps: 
-- Check for all hover buttons and links;
+
 - Accessibility: Check color contrast; h1 that is not the title of the webpage;  
 - 
 - Group all similar properties;
@@ -43,7 +44,6 @@ nav,header,section{
 }
 
 
-
 /* ----NAV BAR SECTION-----r*/
 
 nav {
@@ -51,13 +51,12 @@ nav {
     color: rgba(255,255,255,0.8);
     padding-top: 15px;
     padding-bottom: 15px;
-    height: 25px;
+    height: 20px;
     }
 
 nav a {
     color: rgba(255,255,255,0.8);
     text-decoration: none;
-    border:3px solid blue;/* to erase later*/
 }
 
 
@@ -70,8 +69,6 @@ nav a {
     float: right;
     padding: 0;
     margin: 0 20px 0 0;
-    border:3px solid blue;
-    
 }
 
 .top-links li {
@@ -83,56 +80,86 @@ nav a {
 /*    ---HEADER------*/
 
 
-header{
+header {
     background-image: url("../images/city-scape.svg");
     background-repeat: no-repeat;
     color:white;
-    width:100%;
-    border:3px solid yellow;
-    height: 80vh;
+    width:100vw;
+    height: 70vh;
 }
 
-#header-bar  {
-    height:5vh;
-    border:3px solid blue;
+/* ----HEADER BAR SECTION-----*/
+
+#header-bar-container{
+    height:50px;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-bar-item {
-    display: inline-block;
+.header-item {
     padding: 0;
-    margin: 0 20px 0 0;
-    border:3px solid blue;
-    height:25pX;
-    float:left;
     height:100%;
 }
 
-.header-bar-item a {
-    text-decoration: underline;
+.header-item img {
+    height:100%;
+    padding:7px 0;
+}
+
+.form-container {
+    height:100%;
+    flex-grow:2;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.form-container form .search-btn{
+    padding:1px 1px;
+    border: 1px solid rgb(83, 88, 98);
+}
+
+
+.header-item form .search-btn{
+    background: url("https://cdn2.iconfinder.com/data/icons/picons-essentials/57/search-512.png");
+    background-size:100% 100%;
+    background-color:rgb(31, 82, 111);
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(83, 88, 98);
+    margin-left:5px;}
+
+.header-item form .search-btn:hover{
+    cursor: pointer;
+} 
+
+.header-item input[type=search] {
+    border: 1px solid rgb(156, 162, 175);
+    background-color:rgb(31, 82, 111);
+    height:30px;
+    flex-grow:2;
+}
+
+.header-item .header-bar-item a {
+    text-decoration: none;
     color:white;
 }
 
-#header-bar form {
-    width:80%;
-    height: 100%;
-    border:3px solid yellow;
-}
+.login-container{
+    flex-grow:0;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;}
 
-.header-bar-item #input-field {
-    background-color:rgb(31, 82, 111);
-    width:98%;
-    height: 100%;
-}
 
-.header-bar-item input[type=search] {
-    border: 0 solid whitesmoke;
-}
+/* ----HEADER TEXT SECTION-----*/
 
-#header-bar #npm-logo{
-    height:100%;
-    float:left;
-    border:3px solid blue;
-}
 
 #header-text{
     margin: 0 auto;
@@ -170,7 +197,9 @@ header .btn {
 
 header .btn:hover {
     background-color:rgb(202, 107, 11);
+    cursor: pointer;
 }
+
 
 /* ----COLLABORATION SECTION-----*/
 
@@ -182,7 +211,6 @@ header .btn:hover {
 #orgs-div{
     margin:0 auto;
     width:70%;
-    border:3px solid yellow;
     padding: 10% 0;
     color:white;
 }
@@ -197,7 +225,6 @@ header .btn:hover {
     padding-bottom:1%;
     font-size:2em;
     font-weight:300;
-    border:3px solid yellow;
 }
 
 #orgs-div ul li{
@@ -206,12 +233,36 @@ header .btn:hover {
 }
 
 
+#orgs-div h2, #orgs-div ul, {
+    padding-bottom:3%;}
+
+
+#orgs-div .btn {
+    border: 0 0 0;
+    color:white;
+    margin-top:3%;
+    margin-bottom:1%;
+    padding:1% 2%;
+    background-color: #C12127;
+}
+
+#orgs-div .btn:hover {
+    background-color:rgb(182, 47, 47);
+    cursor: pointer;
+}
+
+#orgs-div a {
+    text-decoration: none;
+    font-weight: 700;
+    color:white;
+}
+
 /* ----WHAT IS NPM  SECTION -----*/
 
 
 #what-is-section{
     background-image: url("../images/forklift.svg"); 
-    height: 80vh;
+    height: 60vh;
     color:white;
 }
 
@@ -242,17 +293,20 @@ header .btn:hover {
 
 #what-is-text-div .btn:hover {
     background-color:rgb(37, 51, 65);
+    cursor: pointer;
 }
 
 
 /* ----WHAT CAN YOU MAKE SECTION -----*/
 
 #what-can-you-make-section{
-    border:3px solid greenyellow;
-    height: 60vh;
-
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center
+    
 }
-
 
 #what-can-you-make-section #top-section{
     text-align:center;
@@ -270,13 +324,11 @@ header .btn:hover {
     padding-bottom:0.5%;}
 
 .col-container{
-    border:3px solid purple;
     width:70%;
     margin:0 auto;
 }
 
 .col-3{
-    border:3px solid yellow;
     width:24%;
     margin:auto;
     float:left;
@@ -286,12 +338,9 @@ header .btn:hover {
 }
 
 .col-middle{
-    
     margin-left:1.1%;
     margin-right:1.1%;
-    
 }
-
 
 .col-3 .icon{
     width:35%;

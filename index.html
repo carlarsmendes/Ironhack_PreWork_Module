@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>npm clone</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 </head>
 <body>
-  <nav id=nav-bar>
+
+  <nav id="nav-bar">
       <div class="top-left">
         <a class = "heart" href="#">♥︎</a>
         <span class="acronym">Neophobe Plebeian Mumpsimus</span>
@@ -23,19 +23,32 @@
         <li><a href="#">support</a></li>
       </ul>
     </nav>
+
     <header>
-      <div id="header-bar">
-        <img id="npm-logo" src="images/npm-logo.png"  alt="Npm Logo">
-        <form  class="header-bar-item">
-          <input type="search" name="search" id="input-field">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-        <p  class="header-bar-item"><a href="#">Login</a> or <a href="#">Sign Up</a></p>
-        <img src="images/bear-logo.png"  class="header-bar-item" alt="bear logo">
-        
+
+      <div id="header-bar-container">
+
+        <div class="header-item logo-container">
+          <img src="images/npm-logo.png"  alt="Npm Logo">
+        </div>
+
+        <div class="header-item form-container">
+          <form class="form-container">
+            <input type="search" name="search" class="header-bar-item">
+            <button class="header-bar-item search-btn"></button>
+          </form>
+        </div>
       
-      <div class="clearfix"></div>
+        <div class="header-item login-container">
+          <p  class="header-bar-item"><a href="#">login</a> or <a href="#">sign up</a></p>
+          <img src="images/bear-logo.png"  class="header-bar-item" alt="bear logo">
+        </div>
+        <div class="clearfix"></div>
+
+    
       </div>
+      
+
       <div id="header-text">
         <h1>Build amazing things</h1>
         <p>npm is the package manager for JavaScript and the world’s largest software registry. Discover packages of reusable code — and assemble them in powerful new ways.</p>

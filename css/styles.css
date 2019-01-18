@@ -1,3 +1,30 @@
+
+
+/* Done:
+
+- HTML and CSS Tested with the W3C validator 
+- Check if all img have "alt"
+
+
+----*/
+
+/* Next Steps: 
+- Check for all hover buttons and links;
+- Accessibility: Check color contrast; h1 that is not the title of the webpage;  
+- 
+- Group all similar properties;
+- Organize CSS (Indent, classes vs IDs, are there properties that could be grouped etc)
+- Did all the images get used?
+- Upload to GitHub
+- 
+- Mobile Version? Make it responsive?;
+- Lay out questions for Joaquim (Not only what is not working but also what could be better
+
+----*/
+
+/* ----GENERAL AND REPEATED STYLES----*/
+
+
 *{
     padding:0;
     margin:0;
@@ -7,16 +34,24 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+nav,header,section{
+    width:100vw;
+}
+
+.clearfix{
+    clear:both;
+}
+
+
+
 /* ----NAV BAR SECTION-----r*/
 
 nav {
     background-color: #C12127;
     color: rgba(255,255,255,0.8);
     padding-top: 15px;
-    padding-bottom:15px;
+    padding-bottom: 15px;
     height: 25px;
-    font-family:'';/*what should the font family be?*/
-    
     }
 
 nav a {
@@ -47,10 +82,6 @@ nav a {
 
 /*    ---HEADER------*/
 
-
-.clearfix{
-    clear:both;
-}
 
 header{
     background-image: url("../images/city-scape.svg");
@@ -95,14 +126,13 @@ header{
 
 .header-bar-item input[type=search] {
     border: 0 solid whitesmoke;
-  }
+}
 
 #header-bar #npm-logo{
     height:100%;
     float:left;
     border:3px solid blue;
 }
-
 
 #header-text{
     margin: 0 auto;
@@ -140,15 +170,13 @@ header .btn {
 
 header .btn:hover {
     background-color:rgb(202, 107, 11);
-    
 }
 
-/* ----COLLABORATION SECTION-----r*/
+/* ----COLLABORATION SECTION-----*/
 
 #collaboration-section {
     width:100vw;
     background-color:rgb(39, 53, 71); 
-    
 }
 
 #orgs-div{
@@ -168,7 +196,7 @@ header .btn:hover {
 #orgs-div h2{
     padding-bottom:1%;
     font-size:2em;
-    font-weight:light;
+    font-weight:300;
     border:3px solid yellow;
 }
 
@@ -178,5 +206,110 @@ header .btn:hover {
 }
 
 
+/* ----WHAT IS NPM  SECTION -----*/
 
 
+#what-is-section{
+    background-image: url("../images/forklift.svg"); 
+    height: 80vh;
+    color:white;
+}
+
+#what-is-text-div{
+    width:30%;
+    position:relative;
+    left:15%;
+    top:25%;
+}
+
+#what-is-text-div h2{
+    padding-bottom:2%;
+    font-size:2em;
+    font-weight:300;
+}
+
+#what-is-text-div h2,p,button{
+    padding-bottom:5%;
+}
+
+
+#what-is-text-div .btn {
+    background-color:rgb(49, 68, 88);
+    border: 0 0 0;
+    color:white;
+    width:25%
+}
+
+#what-is-text-div .btn:hover {
+    background-color:rgb(37, 51, 65);
+}
+
+
+/* ----WHAT CAN YOU MAKE SECTION -----*/
+
+#what-can-you-make-section{
+    border:3px solid greenyellow;
+    height: 60vh;
+
+}
+
+
+#what-can-you-make-section #top-section{
+    text-align:center;
+    
+}
+
+#top-section h2{
+    color:rgb(83, 88, 98);
+    font-size:2em;
+    font-weight:300;
+    padding:2%;}
+
+#top-section p{
+    color:rgb(135, 145, 156);
+    padding-bottom:0.5%;}
+
+.col-container{
+    border:3px solid purple;
+    width:70%;
+    margin:0 auto;
+}
+
+.col-3{
+    border:3px solid yellow;
+    width:24%;
+    margin:auto;
+    float:left;
+    padding:1.8% 4%;
+    text-align: center;
+    height:100%;
+}
+
+.col-middle{
+    
+    margin-left:1.1%;
+    margin-right:1.1%;
+    
+}
+
+
+.col-3 .icon{
+    width:35%;
+    margin:0 auto;
+}
+
+.col-3 h3 {
+    color:rgb(83, 88, 98);
+    padding:4% 0;
+}
+
+.col-3 p {
+    font-size: 0.9em;
+    color:rgb(135, 145, 156);
+}
+
+.col-3 a{
+    color:rgb(208, 74, 73);
+    font-weight:700;
+    text-decoration: none;
+}
